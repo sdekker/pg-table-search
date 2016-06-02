@@ -1,10 +1,10 @@
 name:                pg-table-search
 version:             0.1.0.0
 synopsis:            Postgres table search using n-gram matching
-license:             Copyright (c) 2016, Stephen Dekker
+license:             BSD3
 author:              Stephen Dekker
 maintainer:          steve.dekk@gmail.com
-copyright:           BSD3
+copyright:           Copyright (c) 2016, Stephen Dekker
 build-type:          Simple
 cabal-version:       >=1.10
 
