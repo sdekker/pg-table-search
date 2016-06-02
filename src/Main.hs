@@ -60,8 +60,8 @@ argParser = info (helper <*> parseArguments) (fullDesc)
 ngrams :: Int -> Text -> MultiSet Text
 ngrams n string = go MultiSet.empty padded len
     where canonical     = Text.toLower string
-          padded        = Text.append (Text.replicate (n-1) " ") canonical
-          len           = Text.length canonical + (n-1)
+          padded        = Text.center len ' ' canonical
+          len           = Text.length canonical + 2*(n-1)
           go set xs cnt = if cnt < n then set else go set' (Text.tail xs) (cnt-1)
               where set' = MultiSet.insert (Text.take n xs) set
 
